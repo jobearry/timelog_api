@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from typing import List
-from models.user import UserResponse
+from src.models.user import UserResponse
 from motor.motor_asyncio import AsyncIOMotorClient
 
 from dotenv import load_dotenv
