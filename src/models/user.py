@@ -29,3 +29,6 @@ class UserResponse(BaseModel):
   created_at: str
   is_active: bool
   role: str
+
+  class Config:
+    allow_population_by_field_name = True
