@@ -24,6 +24,7 @@ class User:
 class UserResponse(BaseModel):
   id: int
   username: str
+  password: str
   email: str
   phone: str
   created_at: str
