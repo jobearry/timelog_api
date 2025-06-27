@@ -1,25 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional
-class User:
-  def __init__(
-      self,
-      id: int,
-      username: str,
-      password: str,
-      email: str,
-      phone: str,
-      created_at: str,
-      is_active: bool,
-      role: str
-    ):
-    self.id = id
-    self.username = username
-    self.password = password
-    self.email = email
-    self.phone = phone
-    self.created_at = created_at
-    self.is_active = is_active
-    self.role = role
+from datetime import datetime
 
 class UserResponse(BaseModel):
   id: int
@@ -27,7 +7,7 @@ class UserResponse(BaseModel):
   password: str
   email: str
   phone: str
-  created_at: str
+  created_at: datetime
   is_active: bool
   role: str
 

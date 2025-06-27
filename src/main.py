@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from typing import List
-from src.models.user import UserResponse
+from models.user import UserResponse
 from motor.motor_asyncio import AsyncIOMotorClient
 
 from dotenv import load_dotenv
@@ -37,3 +37,4 @@ async def view_users():
         return users
     except Exception as e:
         return {"error": str(e)}
+    
