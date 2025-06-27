@@ -1,8 +1,8 @@
+from beanie import Document
 from pydantic import BaseModel
 from datetime import datetime
 
-class UserResponse(BaseModel):
-  id: int
+class User(Document):
   username: str
   password: str
   email: str
@@ -11,5 +11,5 @@ class UserResponse(BaseModel):
   is_active: bool
   role: str
 
-  class Config:
-    allow_population_by_field_name = True
+  class Settings:
+    name = "users"
