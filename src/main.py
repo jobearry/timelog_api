@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from src.controllers.user_controller import router as user_router
+from src.controllers.hour_log_controller import router as manhour_router
 from src.db import init_db
 from contextlib import asynccontextmanager
 
@@ -15,3 +16,4 @@ app = FastAPI(
 ) 
 
 app.include_router(user_router)
+app.include_router(manhour_router)

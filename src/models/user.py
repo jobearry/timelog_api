@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from datetime import datetime
 
 class User(Document):
+  user_id: int
   username: str
   password: str
   email: str
@@ -13,3 +14,4 @@ class User(Document):
 
   class Settings:
     name = "users"
+
